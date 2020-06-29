@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+      rel="stylesheet"> <!--Importando ícones de interesse como o X para fechar janelas!-->
+        <title>Rafael</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <header>
+
+            <div class="links">
+                <a href="/">Sobre</a><!--Toda vez que coloco a barra estou me referenciando à página índice.html-->
+                <a href="portfolio.html">Portfólio</a>
+            </div>
+
+        </header>
+
+        <div id="wrapper">
+            <h1>Portfólio</h1>
+        </div>
+
+        <section class="cards">
+            
+            <div class="card" id="vids/ecoleta.mp4">
+                <div class="card__image-container">
+                    <img src="../assets/ecoleta.png" alt="ecoleta">
+                </div>
+
+                <div class="class__content">
+                    <p>Projeto Ecoleta | Rafael Almeida</p>
+                </div>
+
+                <div class="card__info">
+                    <p>NextLevelWeek 1.0 - Rocketseat</p>
+                    <a class= "git" href="https://github.com/alsantosrafael/NextLevelWeek-RocketSeat" target="_blank"><img  src="/assets/github.svg" alt="git icon"></a>
+                </div>
+            </div>
+
+            <div class="card" id="">
+                <div class="card__image-container">
+                    <img src="/assets/javascriptcover.jpeg" alt="logo javascript">
+                </div>
+                <div class="class__content">
+                    <p>Ex. Javascript | Rafael Almeida</p>
+                </div>
+                <div class="card__info">
+                    <p>Launchbase Bootcamp - Rocketseat</p>
+                    <a class= "git" href="https://github.com/alsantosrafael/launchbase-exercicios" target="_blank"><img  src="/assets/github.svg" alt="git icon"></a>
+                </div>
+            </div>
+
+            <div class="card" id="">
+                <div class="card__image-container">
+                    <img src="/assets/photo-1526379095098-d400fd0bf935.jpg" alt="logo python" styles: background-color: white>
+                </div>
+                <div class="class__content">
+                    <p>Ex. Python | Rafael Almeida</p>
+                </div>
+                <div class="card__info">
+                    <p>Exercícios de Fixação</p>
+                    <a class= "git" href="https://github.com/alsantosrafael/Python" target="_blank"><img  src="/assets/github.svg" alt="git icon"></a>
+                </div>
+            
+            </div>
+
+            <div class="card" id="">
+                <div class="card__image-container">
+                    <img src="/assets/photo-1529603992250-a55acb77d146.jpg" alt="front end picture">
+                </div>
+                <div class="class__content">
+                    <p>Ex. Frontend | Rafael Almeida</p>
+                </div>
+                <div class="card__info">
+                    <p>Launchbase Bootcamp - Rocketseat</p>
+                    <a class= "git" href="https://github.com/alsantosrafael/Phase02---Starting-FrontEnd" target="_blank"><img  src="/assets/github.svg" alt="git icon"></a>
+                </div>
+            </div>
+
+        </section>
+        
+        <div class="modal-overlay">
+            <div class="modal">
+                <a class="close-modal">
+                    <i class="material-icons">close</i><!--o nome do botao tem que ser igual ao do icone! Basta procurar-->
+                </a>
+
+                <div class= "modal-content">
+                    <!--<iframe src="" frameborder="0"></iframe>-->
+                    <video src=""></video>
+                </div>
+            </div>
+        </div>
+
+        <script src= "scripts.js"></script>
+    </body>
+
+</html>

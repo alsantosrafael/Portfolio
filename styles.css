@@ -1,0 +1,251 @@
+/*Importando a fonte que eu quero aqui*/
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:400,700&display=swap";
+
+:root {
+
+    --color-green: #50fa7b;
+    --color-text: #B0E3EC;
+    --roxo-rocket: #7159C1;
+
+}
+
+* {
+    margin:0;
+    padding:0;
+    border:0;
+   
+}
+
+body {
+
+    background: #282a36;
+
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--color-text);
+
+    
+}
+
+header {
+    padding: 32px;
+    border-bottom: 1px solid #333;
+    background: rgba(0, 0, 0, 0.1)
+
+}
+
+.links {
+    text-align: center;
+}
+
+.links a {
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 16px;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: var(--color-green);
+    padding: 10px; 
+    border: 2px solid;
+    border-radius: 8px 4px;
+    background-color: rgba(155, 143, 143, 0.438);
+
+
+    transition: 400ms;
+
+}
+
+
+#wrapper{
+    margin-top: 32px;
+    text-align: center;
+    padding: 32px;
+    
+}
+
+#wrapper img {
+
+    border-radius: 50%;
+    border: 3px solid var(--color-green);
+    margin-bottom: 48px;
+
+    height: 250px;
+    width: 250px;
+}
+
+#wrapper h1 {
+    text-align: center;
+    font-size: 42px;
+    line-height: 52px;
+    font-weight: bold;
+}
+
+#wrapper h2 {
+    text-align: center;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    opacity: 0.6;
+    margin-top: 12px;
+}
+
+#wrapper p {
+
+    max-width: 500px;
+    margin: 32px auto;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+#wrapper p a {
+
+    color: var(--color-green);
+
+}
+
+
+
+/*****---- CARDS----*****/
+
+.cards {
+
+    max-width: 800px;/*Limitei a maxima largura da minha caixa cards para 800px na página*/
+
+
+    margin: 0 auto; /*Alinhamento ao meio!*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; /*Criando espacamento entre cada elemento da coluna e da linha do grid*/
+}
+
+.card{
+    background-color: var(--roxo-rocket);
+ 
+    border-radius: 8px;
+    /*cursor: pointer;*/
+
+}
+
+.card__image-container img {
+
+    border-radius: 8px 8px 0 0;
+    width: 100%;/* As vezes a imagem nao ocupa todo o espaco. Forcei a imagem ocupar 100% do espaco do pai, no caso, do cards*/
+    height: 110.7px; /*Altura setada para que todas as imagens fiquem com as mesmas dimensoes*/
+}
+
+
+
+.card__image-container img:hover{
+    filter: invert(10%);
+    transition: 400ms;
+
+}
+.class__content, 
+.card__info {
+
+    color: white;
+
+    font-weight: normal;
+    margin: 5px 0;
+
+}
+
+.class__content p {
+
+    text-align: left;
+    margin-left: 12px;
+
+}
+
+.card__info {
+
+    display: flex;
+    text-align: left;
+    
+}
+
+ .card__info p {
+    margin: auto;
+    margin-left: 12px;
+
+}
+
+ .git img {
+
+    width: 25px;
+    height: 25px;
+    filter: invert();
+} 
+
+.git img:hover {
+
+    filter: initial;
+
+    transition: color 400ms;
+}
+
+
+
+/*****---- Modal - Overlay ----*****/
+
+.modal-overlay {
+
+    background-color: rgba(0, 0, 0, 0.7);
+    /*O modal só vai aparecer quando eu definir as características dele*/
+    width: 100%;/*Cobriu 100% da tela em largura*/
+    height: 100%;/*Cobriu 100% da tela em altura*/
+    position: fixed;/*Fixou a posicao*/
+    top: 0; /*Jogou o modal lá pra cima da tela, cobrindo-a*/
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;/*Eu consigo colocar quaisquer configuracoes dos filhos relativas ao meu modal com isso.*/
+
+}
+
+
+.modal .close-modal {
+
+    color: black;
+    /*O botao vai aparecer do lado esquerdo no canto superior. Se eu quiser movimentá-lo:*/
+    position: absolute; /*Agora tenho liberdade para colocar o botao em qualquer lugar*/
+    right: 8px; /*Coloquei meu X 8px da direita para a esquerda*/
+    top: 8px; /*Coloquei meu X 8px da cima para baixo*/
+    cursor: pointer;/*Coloco a maozinha no icone. Se eu tivesse mantido meu href, a mao apareceria automaticamente*/
+}
+
+
+/*****---- Modal - Active ----*****/
+
+.modal-overlay.active {
+
+    opacity: 1;
+    visibility: visible;
+
+
+}
+
+/* iframe {
+
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+} */
+
+video {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
