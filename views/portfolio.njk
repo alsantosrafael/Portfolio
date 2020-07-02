@@ -1,0 +1,56 @@
+{% extends "layout.njk"%}
+
+{% block head %}
+    <title>Portfolio -  Rafael Almeida</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+      rel="stylesheet"> <!--Importando ícones de interesse como o X para fechar janelas!-->
+{% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <h1>Portfólio</h1>
+    </div>
+
+    <section class="cards">
+        {% for item in items %}
+                
+            <div class="card" id="{{item.id}}"><!--Esse ID aqui vai ser utilizado para colocar um README em gif-->
+                <div class="card__image-container {{'featured-wrapper' if item.featured}}"><!--Criando if!-->
+                    <img src="https://raw.githubusercontent.com/alsantosrafael/{{item.imglink}}" alt="Imagem de {{item.title}}">
+                    {% if item.featured %}
+                        <div class="featured">Featured</div>
+                    {% endif %}
+                </div>
+
+                <div class="class__content">
+                    <p>{{item.title}}</p>
+                </div>
+
+                <div class="card__info">
+                    <p>{{item.info}}</p>
+                    <a class= "git" href="https://github.com/alsantosrafael/{{item.git}}" target="_blank"><img  src="https://image.flaticon.com/icons/svg/25/25231.svg" alt="git icon"></a>
+                </div>
+            </div>
+
+        {% endfor%}
+    </section>
+    
+    <div class="modal-overlay">
+        <div class="modal">
+            <a class="close-modal">
+                <i class="material-icons">close</i><!--o nome do botao tem que ser igual ao do icone! Basta procurar-->
+            </a>
+
+            <div class= "modal-content">
+                
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src= "scripts.js"></script>
+
+{% endblock %}
+
+

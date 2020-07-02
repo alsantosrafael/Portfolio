@@ -1,0 +1,27 @@
+<!--Para que minha template engine funcione, preciso inicialmente referenciar onde os
+templates que vou criar estão. Estamos posicionando esses templates na página layout
+portanto, extendemos o conteudo da pagina about para a pagina layout-->
+{% block head %}
+    <title> Sobre - {{ about.name}}</title>
+{% endblock %}
+{% extends "layout.njk"%}
+
+
+{% block content %}
+    
+<div id="wrapper">
+    <img src="{{ about.avatar_url}}" alt="Imagem de {{ about.name}}">
+    <h1>{{ about.name}}</h1>
+    <h2>{{ about.education}}</h2>
+    <p>{{ about.abstract}}</p>
+</div>
+
+<div id="links-footer" class="links">
+
+    {% for link in about.social %}
+    <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+    {% endfor %}
+</div>
+
+ 
+{% endblock%}
